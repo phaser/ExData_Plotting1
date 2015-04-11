@@ -1,5 +1,5 @@
 # The data from household_power_consumption.txt was inserted into the SQLite
-# database to be easy to extract only the data we need.
+# database to be easy to extract only the data we need. see transform_csv_to_sqlite.R
 db <- "data/household_power_consumption.db"
 
 library(RSQLite)
