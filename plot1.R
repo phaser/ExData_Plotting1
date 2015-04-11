@@ -9,6 +9,7 @@ con <- dbConnect(dbDriver("SQLite"), dbname=db)
 data <- dbGetQuery(con, "select * from household_power_consumption a where a.Date == '1/2/2007' OR a.Date == '2/2/2007';")
 dbDisconnect(con)
 
+# Generate the plot
 png(filename = "plot1.png")
 par(bg="transparent", mar=c(5, 4, 2, 2))
 hist(data$Global_active_power, col="red", main="Global Active Power", axes=FALSE,
